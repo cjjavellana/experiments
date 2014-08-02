@@ -1,0 +1,129 @@
+
+.header {
+	padding: 0px 20px; 
+	background-color: #176895;
+	position: absolute;
+	height: 200px;
+	width: 1024;
+	z-index: -50;
+}
+
+.logo {
+	width: 200px;
+	float: left;
+	z-index: 1000;
+	padding-top: 10px;
+	color: #fff;
+	font-family: 'Arial Narrow', 'Arial';
+}
+
+.fill-white {
+	fill: white;
+}
+
+.asap {
+	font-weight: bold;
+	font-size: 54px;
+	position: absolute;
+	top: 10px;
+	left: 85px;
+}
+
+.asap-desc {
+	font-weight: normal;
+	font-size: 16px;
+	position: absolute;
+	top: 80px;
+}
+
+.mid-text {
+	float: left;
+	color: #fff;
+	padding-left: 50px;
+}
+
+.fab {
+	float: left;
+	width: auto;
+	margin-top: 25px;
+	color: #fff;
+	font: bold 16px Arial;
+}
+
+.scorchin {
+	font-size: 12px;
+}
+
+.featured {
+	padding-top: 120px;
+	padding-left: 0px;
+	font-size: 16px;
+}
+
+.featured .featured-text {
+	padding-left: 15px;
+	padding-top: 5px;
+	height: 40px;
+	background-color: #d6e9ef;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+div.desc {
+	width: 525px;
+	float: left;
+	font-size: 20px;
+}
+
+.share {
+	margin-top: 5px;
+	float: left;
+	width: 110px;
+}
+
+.fb-icon {
+	margin-top: 8px;
+}
+
+.fb-icon img {
+	width: 50px;
+}
+.featured  .wt-bg {
+	height: 40px;
+	background-color: #fff;
+}
+
+.linepattern {
+	position: absolute;
+	z-index: -10;
+	top: 0px;
+	left: 0px;
+	height: 200px;
+	width: 1024px;
+}
+
+.stopwatch {
+	position: absolute;
+	top: 5px;
+	left: 815px;
+	width: 175px;
+	height: 200px;
+}
+
+.stopwatch div {
+	position: absolute;
+	z-index: 10;
+	color: #fff;
+}
+
+.deal-ends {
+	top: 90px;
+	left: 40px;
+	width: 100px;
+}
+
+#countdown-timer {
+	top: 110px;
+	left: 40px;
+	font-size: 24px;
+}

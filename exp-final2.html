@@ -1,0 +1,68 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/styles/exp-final.css">
+		<!-- Optional theme -->
+		
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="/scripts/jquery-2.1.1.min.js"></script>
+		<script src="/scripts/timer.js"></script>
+		<script src="/scripts/exp-final.js"></script>
+		<title>Expedia Front End Test</title>
+
+		<script>
+			$(document).ready(function(){
+				$('#svg').drawStopWatch();
+				$('#svg').createTitleUnderline();
+				$('#sw-big').drawBigStopWatch();
+				$('#lp-svg').createSineWavePattern();
+			
+				var timer = new CountdownTimer($('#countdown-timer'));
+				timer.start();
+			});
+
+		</script>
+
+	</head>
+	<body>
+
+		<div class="header">
+			<div class="logo">
+				<svg id="svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="100" />
+				<div class="asap">ASAP</div>
+				<div class="asap-desc">A SUDDEN AMAZING PRICE</div>					
+			</div>
+			<div class="mid-text">
+				<div class="fab">Get seriously fabulous discounts every day on Expedia</div>
+				<div class="scorchin">These scorchin' deals change daily at 12:00 AM (PST)</div>
+			</div>
+			<div class="featured">
+				<div class="featured-text">
+					<div class="desc">Featured Offers Up To 50% Off</div>
+					<div class="share">Share this deal </div>
+					<div class="fb-icon"><a href="#"><img src="/images/1406536064_facebook_button.png" alt="facebook share"/></a></div>
+				</div>
+				<div class="wt-bg">
+				</div>
+			</div>
+			<div class="stopwatch">
+				<svg id="sw-big" xmlns:xlink="http://www.w3.org/1999/xlink" width="175" height="200" />
+				<div class="deal-ends">DEAL ENDS IN</div>
+				<div id="countdown-timer"></div>
+			</div>
+			<div class="linepattern">
+				<svg id="lp-svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="200">
+				</svg>
+			</div>
+		</div>
+
+
+
+	</body>
+</html>

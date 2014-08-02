@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/styles/rwd.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="/scripts/jquery-2.1.1.min.js"></script>
+		<script src="/scripts/columnize.js"></script>
+		<script src="/scripts/enquire.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<title>Jobs Bank</title>
+
+		<script>
+			$(document).ready(function(){
+				$('ul.jb-browsejobs-category').columnizeList({
+					columnCount: 3,
+					columnGap: 10
+				});
+
+				enquire.register("screen and (max-width: 768px)", {
+				    match : function() {
+				    	var categoryList = $('.jb-browsejobs-category li');
+				        
+				        $.each(categoryList, function(idx, elem){
+				        		console.log(elem);
+				        		$(elem).removeAttr('style');
+				        });
+				    },  
+				    unmatch : function() {
+				        $('ul.jb-browsejobs-category').columnizeList({
+							columnCount: 3,
+							columnGap: 10
+						});
+				    }
+				});
+			});
+		</script>
+	</head>
+	<body class="container-fluid">
+		<div class="container row centered-container">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			  <div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">
+			      	<img src="/images/logo.png" alt="Jobsbank Logo"/>
+			      </a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav pad-top-5px">
+			        <li><a href="#">For Individuals</a></li>
+			        <li><a href="#">For Employers</a></li>
+			        <li><a href="#">About</a></li>
+			        <li><a href="#">FAQ / User Guides</a></li>
+			      </ul>
+			      <form class="navbar-form navbar-left pad-top-5px" role="search">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="Search">
+			        </div>
+			        <button type="submit" class="btn btn-default">Submit</button>
+			      </form>
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle sg-logo" data-toggle="dropdown">
+			          	<img src="/images/sggov.jpg" alt="Singapore Government"/>
+			          </a>
+			        </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</div>
+		<div class="container jobstat">
+			<div class="row">
+				<div class="col-lg-6">
+					<h2>A one-stop jobs resource</h2>
+					<div class="jb-desc">
+						Welcome to Jobs Bank, the public platform to facilitate job matching between local individuals and employers.
+					</div>
+				</div>
+				<div class="col-lg-6 home-img home-img-width">
+					<div class="jb-jobcount-section">
+						<div>MORE THAN </div>
+						<span class="jobcount">30,000</span> 
+						<div>JOBS AVAILABLE</div>
+					</div>
+					<div class="jb-reg-login">
+						<div>Register / Login</div>
+						<div><a href="#"><img src="/images/btn-jobseeker.jpg" alt="Job Seeker"/></a></div>
+						<div><a href="#"><img src="/images/btn-employer.jpg" alt="Employer"/></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+      	<div class="container jb-browsejobs-count">
+  			<div class="jb-tab-list">
+				<ul class="nav nav-tabs" role="tablist">
+				  <li class="active">
+				  	<a href="#jobcategory-list" role="tab" data-toggle="tab">Category</a>
+				  </li>
+				  <li><a href="#jobbyemployer-list" role="tab" data-toggle="tab">Employer</a></li>
+				  <li><a href="#jobbylocation-location" role="tab" data-toggle="tab">Location</a></li>
+				</ul>
+			</div>
+			<!-- Tab panes -->
+			<div class="tab-content jb-tab-content">
+			  <div class="tab-pane fade in active jb-jobbycategory" id="jobcategory-list">
+			  		<ul class="jb-browsejobs-category">
+						<li>Accounting / Auditing / Taxation (568)</li>
+						<li>Admin / Secretarial   (708)</li>
+						<li>Advertising / Media   (159)</li>
+						<li>Architecture / Interior Design (120)</li>
+						<li>Banking and Finance   (486)</li>
+						<li>Building and Construction   (540)</li>
+						<li>Consulting   (184)</li>
+						<li>Customer Service   (526)</li>
+						<li>Design   (171)</li>
+						<li>Education and Training   (267)</li>
+						<li>Engineering   (1568)</li>
+						<li>Entertainment   (29)</li>
+						<li>Environment / Health   (72)</li>
+						<li>Events / Promotions   (77)</li>
+						<li>F&amp;B   (466)</li>
+						<li>General Management   (106)</li>
+						<li>General Work   (255)</li>
+						<li>Healthcare / Pharmaceutical   (315)</li>
+						<li>Hospitality   (256)</li>
+						<li>Human Resources   (303)</li>
+						<li>Information Technology   (1578)</li>
+						<li>Insurance   (82)</li>
+						<li>Legal   (78)</li>
+						<li>Logistics / Supply Chain   (502)</li>
+						<li>Manufacturing   (637)</li>
+						<li>Marketing / Public Relations   (318)</li>
+						<li>Medical / Therapy Services   (48)</li>
+						<li>Personal Care / Beauty   (49)</li>
+						<li>Professional Services   (132)</li>
+						<li>Public / Civil Service   (117)</li>
+						<li>Purchasing / Merchandising   (127)</li>
+						<li>Real Estate / Property Management   (126)</li>
+						<li>Repair and Maintenance   (219)</li>
+						<li>Risk Management   (49)</li>
+						<li>Sales / Retail   (675)</li>
+						<li>Sciences / Laboratory / R&amp;D   (257)</li>
+						<li>Security and Investigation   (70)</li>
+						<li>Social Services   (46)</li>
+						<li>Telecommunications   (153)</li>
+						<li>Travel / Tourism   (80)</li>
+						<li>Others   (626)</li>
+					</ul>
+			  </div>
+			  <div class="tab-pane fade" id="jobbyemployer-list">
+					<ul class="jb-browsejobs-category">
+						<li>Accounting / Auditing / Taxation (568)</li>
+						<li>Admin / Secretarial   (708)</li>
+						<li>Advertising / Media   (159)</li>
+						<li>Architecture / Interior Design (120)</li>
+						<li>Banking and Finance   (486)</li>
+						<li>Building and Construction   (540)</li>
+						<li>Consulting   (184)</li>
+						<li>Customer Service   (526)</li>
+						<li>Design   (171)</li>
+						<li>Education and Training   (267)</li>
+						<li>Engineering   (1568)</li>
+						<li>Entertainment   (29)</li>
+						<li>Environment / Health   (72)</li>
+						<li>Events / Promotions   (77)</li>
+						<li>F&amp;B   (466)</li>
+						<li>General Management   (106)</li>
+						<li>General Work   (255)</li>
+						<li>Healthcare / Pharmaceutical   (315)</li>
+						<li>Hospitality   (256)</li>
+						<li>Human Resources   (303)</li>
+						<li>Information Technology   (1578)</li>
+						<li>Insurance   (82)</li>
+						<li>Legal   (78)</li>
+						<li>Logistics / Supply Chain   (502)</li>
+						<li>Manufacturing   (637)</li>
+						<li>Marketing / Public Relations   (318)</li>
+						<li>Medical / Therapy Services   (48)</li>
+						<li>Personal Care / Beauty   (49)</li>
+						<li>Professional Services   (132)</li>
+						<li>Public / Civil Service   (117)</li>
+						<li>Purchasing / Merchandising   (127)</li>
+						<li>Real Estate / Property Management   (126)</li>
+						<li>Repair and Maintenance   (219)</li>
+						<li>Risk Management   (49)</li>
+						<li>Sales / Retail   (675)</li>
+						<li>Sciences / Laboratory / R&amp;D   (257)</li>
+						<li>Security and Investigation   (70)</li>
+						<li>Social Services   (46)</li>
+						<li>Telecommunications   (153)</li>
+						<li>Travel / Tourism   (80)</li>
+						<li>Others   (626)</li>
+					</ul>
+			  </div>
+			  <div class="tab-pane fade" id="jobbylocation-location">
+			  		<ul class="jb-browsejobs-category">
+						<li>Accounting / Auditing / Taxation (568)</li>
+						<li>Admin / Secretarial   (708)</li>
+						<li>Advertising / Media   (159)</li>
+						<li>Architecture / Interior Design (120)</li>
+						<li>Banking and Finance   (486)</li>
+						<li>Building and Construction   (540)</li>
+						<li>Consulting   (184)</li>
+						<li>Customer Service   (526)</li>
+						<li>Design   (171)</li>
+						<li>Education and Training   (267)</li>
+						<li>Engineering   (1568)</li>
+						<li>Entertainment   (29)</li>
+						<li>Environment / Health   (72)</li>
+						<li>Events / Promotions   (77)</li>
+						<li>F&amp;B   (466)</li>
+						<li>General Management   (106)</li>
+						<li>General Work   (255)</li>
+						<li>Healthcare / Pharmaceutical   (315)</li>
+						<li>Hospitality   (256)</li>
+						<li>Human Resources   (303)</li>
+						<li>Information Technology   (1578)</li>
+						<li>Insurance   (82)</li>
+						<li>Legal   (78)</li>
+						<li>Logistics / Supply Chain   (502)</li>
+						<li>Manufacturing   (637)</li>
+						<li>Marketing / Public Relations   (318)</li>
+						<li>Medical / Therapy Services   (48)</li>
+						<li>Personal Care / Beauty   (49)</li>
+						<li>Professional Services   (132)</li>
+						<li>Public / Civil Service   (117)</li>
+						<li>Purchasing / Merchandising   (127)</li>
+						<li>Real Estate / Property Management   (126)</li>
+						<li>Repair and Maintenance   (219)</li>
+						<li>Risk Management   (49)</li>
+						<li>Sales / Retail   (675)</li>
+						<li>Sciences / Laboratory / R&amp;D   (257)</li>
+						<li>Security and Investigation   (70)</li>
+						<li>Social Services   (46)</li>
+						<li>Telecommunications   (153)</li>
+						<li>Travel / Tourism   (80)</li>
+						<li>Others   (626)</li>
+					</ul>
+			  </div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="col-sm-4">
+				<a href="#"><img src="/images/courses.jpg" alt="Courses" /></a>
+			</div>
+			<div class="col-sm-4">
+				<a href="#"><img src="/images/events.jpg" alt="Events" /></a>
+			</div>
+			<div class="col-sm-4">
+				<a href="#"><img src="/images/learning.jpg" alt="learning" /></a>
+			</div>
+		</div>
+	</body>
+</html>
